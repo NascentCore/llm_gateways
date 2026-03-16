@@ -1,2 +1,5 @@
 # Cursor 运行时目录
 .cursor/
+
+# Env (use .env.example as template)
+.env
