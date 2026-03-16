@@ -5,7 +5,7 @@
 - moonshotai/kimi-k2.5
 - minimax/minimax-m2.5
 - anthropic/claude-sonnet-4.6
-- google/gemini-2.5-flash
+- google/gemini-3-flash-preview
 - openai/gpt-5.2
 
 ## 完整清单（部分、所有主流模型均可支持）
@@ -16,6 +16,7 @@
 - google/gemini-2.5-flash
 - google/gemini-2.5-flash-lite
 - google/gemini-2.5-pro
+- google/gemini-3-flash-preview
 - google/gemini-3-pro-preview
 - google/gemini-3.1-flash-image-preview (nano banana 2)
 - google/gemini-3-pro-image-preview (nano banana pro)
