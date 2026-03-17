@@ -6,6 +6,7 @@
 
 - **测试脚本**：`test_chat.py`
 - **运行方式**：使用系统 Python 执行（`python test_chat.py`）
+- **API key**：将提供给用户的 API Key 以文本文件 api_key.txt
 
 ---
 
