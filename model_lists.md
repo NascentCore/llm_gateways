@@ -3,6 +3,7 @@
 ## 测试模型清单（文本模型）
 
 - bytedance/doubao-seed-2-0-mini-260215
+- qwen/qwen3.5-flash-02-23
 - moonshotai/kimi-k2.5
 - minimax/minimax-m2.5
 - z-ai/glm-5
@@ -17,6 +18,8 @@
 - bytedance/doubao-seed-2-0-lite-260215
 - bytedance/doubao-seedance-1-5-pro-251215
 - bytedance/doubao-seedream-5-0-260128
+- qwen/qwen3.5-flash-02-23
+- qwen/qwen3-coder-next
 - moonshotai/kimi-k2.5
 - minimax/minimax-m2.5
 - z-ai/glm-5
