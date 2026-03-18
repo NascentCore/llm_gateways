@@ -1,0 +1,64 @@
+﻿类别,模型系列,模型名称,平台,服务渠道,部署范围,计费层级或模式,计费模态或Token类型,输入价格(美元/百万Token),缓存输入价格(美元/百万Token),输出价格(美元/百万Token),5分钟缓存写入价格(美元/百万Token),1小时缓存写入价格(美元/百万Token),缓存命中价格(美元/百万Token),批处理输入价格(美元/百万Token),批处理输出价格(美元/百万Token),长上下文输入价格(美元/百万Token),长上下文输出价格(美元/百万Token),来源链接,备注
+GPT-5.x,GPT-5.4,gpt-5.4,OpenAI,OpenAI API,Global,Standard,Text tokens,2.5,0.25,15,,,,,,5,22.5,https://platform.openai.com/docs/pricing | https://openai.com/api/pricing/,OpenAI官方标准价；含long-context列
+GPT-5.x,GPT-5.4-pro,gpt-5.4-pro,OpenAI,OpenAI API,Global,Standard,Text tokens,30,,180,,,,,,60,270,https://platform.openai.com/docs/pricing,OpenAI官方标准价；含long-context列
+GPT-5.x,GPT-5.2,gpt-5.2,OpenAI,OpenAI API,Global,Standard,Text tokens,1.75,0.175,14,,,,,,,,https://platform.openai.com/docs/pricing,OpenAI官方标准价
+GPT-5.x,GPT-5.1,gpt-5.1,OpenAI,OpenAI API,Global,Standard,Text tokens,1.25,0.125,10,,,,,,,,https://platform.openai.com/docs/pricing,OpenAI官方标准价
+GPT-5.x,GPT-5,gpt-5,OpenAI,OpenAI API,Global,Standard,Text tokens,1.25,0.125,10,,,,,,,,https://platform.openai.com/docs/pricing,OpenAI官方标准价
+GPT-5.x,GPT-5 mini,gpt-5-mini,OpenAI,OpenAI API,Global,Standard,Text tokens,0.25,0.025,2,,,,,,,,https://platform.openai.com/docs/pricing | https://openai.com/api/pricing/,OpenAI官方标准价
+GPT-5.x,GPT-5 nano,gpt-5-nano,OpenAI,OpenAI API,Global,Standard,Text tokens,0.05,0.005,0.4,,,,,,,,https://platform.openai.com/docs/pricing,OpenAI官方标准价
+,,,,,,,,,,,,,,,,,,,
+GPT-5.x,GPT-5,GPT-5 2025-08-07,Azure OpenAI,Microsoft Azure,Global,Standard,Text tokens,1.25,0.13,10,,,,0.63,5,,,https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service,Azure官方表（含Batch）
+GPT-5.x,GPT-5,GPT-5,Azure OpenAI,Microsoft Azure,Data Zone,Standard,Text tokens,1.38,0.14,11,,,,0.69,5.5,,,https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service,Azure官方表（含Batch）
+GPT-5.x,GPT-5 Pro,GPT-5 Pro,Azure OpenAI,Microsoft Azure,Global,Standard,Text tokens,15,,120,,,,,,,,https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service,Azure官方表
+GPT-5.x,GPT-5 Codex,GPT-5 Codex,Azure OpenAI,Microsoft Azure,Global,Standard,Text tokens,1.25,0.13,10,,,,,,,,https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service,Azure官方表
+GPT-5.x,GPT-5 mini,GPT-5-mini,Azure OpenAI,Microsoft Azure,Global,Standard,Text tokens,0.25,0.03,2,,,,,,,,https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service,Azure官方表
+GPT-5.x,GPT-5 mini,GPT-5-mini,Azure OpenAI,Microsoft Azure,Data Zone,Standard,Text tokens,0.28,0.03,2.2,,,,,,,,https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service,Azure官方表
+GPT-5.x,GPT-5 nano,GPT-5-nano,Azure OpenAI,Microsoft Azure,Global,Standard,Text tokens,0.05,0.01,0.4,,,,,,,,https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service,Azure官方表
+GPT-5.x,GPT-5 nano,GPT-5-nano,Azure OpenAI,Microsoft Azure,Data Zone,Standard,Text tokens,0.06,0.01,0.44,,,,,,,,https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service,Azure官方表
+GPT-5.x,GPT-5 chat,GPT-5 chat,Azure OpenAI,Microsoft Azure,Global,Standard,Text tokens,1.25,0.13,10,,,,,,,,https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service,Azure官方表
+GPT-5.x,GPT-5.1,GPT-5.1,Azure OpenAI,Microsoft Azure,Global,Standard,Text tokens,1.25,0.13,10,,,,,,,,https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service,Azure官方表
+GPT-5.x,GPT-5.1,GPT-5.1,Azure OpenAI,Microsoft Azure,Data Zone,Standard,Text tokens,1.38,0.14,11,,,,,,,,https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service,Azure官方表
+GPT-5.x,GPT-5.2,GPT-5.2,Azure OpenAI,Microsoft Azure,Global,Standard,Text tokens,1.75,0.18,14,,,,,,,,https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service,Azure官方表
+GPT-5.x,GPT-5.2,GPT-5.2,Azure OpenAI,Microsoft Azure,Data Zone,Standard,Text tokens,1.93,0.2,15.4,,,,,,,,https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service,Azure官方表
+,,,,,,,,,,,,,,,,,,,
+Claude 4.x,Claude Opus 4.6,claude-opus-4-6,Anthropic Claude API,Anthropic,Global,Standard,Text tokens,5,,25,6.25,10,0.5,2.5,12.5,10,37.5,https://platform.claude.com/docs/en/about-claude/pricing,Anthropic官方；含batch与long-context
+Claude 4.x,Claude Sonnet 4.6,claude-sonnet-4-6,Anthropic Claude API,Anthropic,Global,Standard,Text tokens,3,,15,3.75,6,0.3,1.5,7.5,6,22.5,https://platform.claude.com/docs/en/about-claude/pricing,Anthropic官方；含batch与long-context
+Claude 4.x,Claude Haiku 4.5,claude-haiku-4-5,Anthropic Claude API,Anthropic,Global,Standard,Text tokens,1,,5,1.25,2,0.1,0.5,2.5,,,https://platform.claude.com/docs/en/about-claude/pricing,Anthropic官方
+,,,,,,,,,,,,,,,,,,,
+Claude 4.x,Claude Opus 4.6,claude-opus-4-6,Google Vertex AI,Google Cloud,Global,Standard,Text tokens,5,,25,6.25,10,0.5,2.5,12.5,10,37.5,https://cloud.google.com/vertex-ai/generative-ai/pricing,Google官方Vertex页（Partner models）
+Claude 4.x,Claude Sonnet 4.6,claude-sonnet-4-6,Google Vertex AI,Google Cloud,Global,Standard,Text tokens,3,,15,3.75,6,0.3,1.5,7.5,6,22.5,https://cloud.google.com/vertex-ai/generative-ai/pricing,Google官方Vertex页（Partner models）
+Claude 4.x,Claude Haiku 4.5,claude-haiku-4-5,Google Vertex AI,Google Cloud,Global,Standard,Text tokens,1,,5,1.25,2,0.1,0.5,2.5,,,https://cloud.google.com/vertex-ai/generative-ai/pricing,Google官方Vertex页（Partner models）
+Claude 4.x,Claude Opus 4.6,claude-opus-4-6,Google Vertex AI,Google Cloud,us-east5,Standard,Text tokens,5.5,,27.5,6.875,11,0.55,2.75,13.75,11,41.25,https://cloud.google.com/vertex-ai/generative-ai/pricing,Google官方regional价（约+10%）
+Claude 4.x,Claude Sonnet 4.6,claude-sonnet-4-6,Google Vertex AI,Google Cloud,us-east5,Standard,Text tokens,3.3,,16.5,4.13,6.6,0.33,1.65,8.25,6.6,24.75,https://cloud.google.com/vertex-ai/generative-ai/pricing,Google官方regional价（约+10%）
+Claude 4.x,Claude Haiku 4.5,claude-haiku-4-5,Google Vertex AI,Google Cloud,us-east5,Standard,Text tokens,1.1,,5.5,1.375,2.2,0.11,0.55,2.75,,,https://cloud.google.com/vertex-ai/generative-ai/pricing,Google官方regional价（约+10%）
+,,,,,,,,,,,,,,,,,,,
+Claude 4.x,Claude Opus 4.6,claude-opus-4-6,AWS Bedrock,AWS,Global endpoint,Standard,Text tokens,5,,25,6.25,10,0.5,,,10,37.5,https://aws.amazon.com/bedrock/pricing/ | https://platform.claude.com/docs/en/build-with-claude/claude-on-amazon-bedrock | https://platform.claude.com/docs/en/about-claude/pricing,AWS页面静态抓取未直接展开Claude4.x明细；按Anthropic规则与global基价整理
+Claude 4.x,Claude Opus 4.6,claude-opus-4-6,AWS Bedrock,AWS,Regional endpoint,Standard,Text tokens,5.5,,27.5,6.875,11,0.55,,,11,41.25,https://aws.amazon.com/bedrock/pricing/ | https://platform.claude.com/docs/en/build-with-claude/claude-on-amazon-bedrock,Regional按官方规则较Global +10%
+Claude 4.x,Claude Sonnet 4.6,claude-sonnet-4-6,AWS Bedrock,AWS,Global endpoint,Standard,Text tokens,3,,15,3.75,6,0.3,,,6,22.5,https://aws.amazon.com/bedrock/pricing/ | https://platform.claude.com/docs/en/build-with-claude/claude-on-amazon-bedrock | https://platform.claude.com/docs/en/about-claude/pricing,同上
+Claude 4.x,Claude Sonnet 4.6,claude-sonnet-4-6,AWS Bedrock,AWS,Regional endpoint,Standard,Text tokens,3.3,,16.5,4.125,6.6,0.33,,,6.6,24.75,https://aws.amazon.com/bedrock/pricing/ | https://platform.claude.com/docs/en/build-with-claude/claude-on-amazon-bedrock,Regional按官方规则较Global +10%
+Claude 4.x,Claude Haiku 4.5,claude-haiku-4-5,AWS Bedrock,AWS,Global endpoint,Standard,Text tokens,1,,5,1.25,2,0.1,,,,,https://aws.amazon.com/bedrock/pricing/ | https://platform.claude.com/docs/en/build-with-claude/claude-on-amazon-bedrock | https://platform.claude.com/docs/en/about-claude/pricing,同上
+Claude 4.x,Claude Haiku 4.5,claude-haiku-4-5,AWS Bedrock,AWS,Regional endpoint,Standard,Text tokens,1.1,,5.5,1.375,2.2,0.11,,,,,https://aws.amazon.com/bedrock/pricing/ | https://platform.claude.com/docs/en/build-with-claude/claude-on-amazon-bedrock,Regional按官方规则较Global +10%
+,,,,,,,,,,,,,,,,,,,
+Claude 4.x,Claude Sonnet 4.6,claude-sonnet-4-6,Microsoft Foundry / Azure Marketplace,Microsoft Azure,Marketplace plan,Pay-as-you-go,Text tokens,3,,15,3.75,6,0.3,,,6,22.5,https://marketplace.microsoft.com/en-us/product/saas/anthropic.anthropic-claude-sonnet-4-6-offer?tab=PlansAndPrice,原文单位为$/1K tokens，已换算$/1M
+Claude 4.x,Claude Opus 4.6,claude-opus-4-6,Microsoft Foundry / Azure Marketplace,Microsoft Azure,Marketplace plan,Pay-as-you-go,Text tokens,5,,25,6.25,10,0.5,,,10,37.5,https://marketplace.microsoft.com/en-us/product/saas/anthropic.anthropic-claude-opus-4-6-offer?tab=PlansAndPrice,原文单位为$/1K tokens，已换算$/1M
+Claude 4.x,Claude Haiku 4.5,claude-haiku-4-5,Microsoft Foundry / Azure Marketplace,Microsoft Azure,Marketplace plan,Pay-as-you-go,Text tokens,1,,5,1.25,2,0.1,,,,,https://marketplace.microsoft.com/en-us/product/saas/anthropic.anthropic-claude-haiku-4-5-offer?tab=PlansAndPrice,原文单位为$/1K tokens，已换算$/1M
+,,,,,,,,,,,,,,,,,,,
+Gemini 3.x,Gemini 3.1 Pro Preview,gemini-3.1-pro-preview,Google Vertex AI,Google Cloud,Global,Standard,Text/Image/Video/Audio input + text output,2,0.2,12,,,,,,4,18,https://cloud.google.com/vertex-ai/generative-ai/pricing,<=200K与>200K分别列示
+Gemini 3.x,Gemini 3 Pro Preview,gemini-3-pro-preview,Google Vertex AI,Google Cloud,Global,Standard,Text/Image/Video/Audio input + text output,2,0.2,12,,,,,,4,18,https://cloud.google.com/vertex-ai/generative-ai/pricing,<=200K与>200K分别列示
+Gemini 3.x,Gemini 3 Flash Preview,gemini-3-flash-preview,Google Vertex AI,Google Cloud,Global,Standard,Input(text/image/video) + input(audio) + text output,0.5,0.05,3,,,,,,0.5,3,https://cloud.google.com/vertex-ai/generative-ai/pricing,音频输入为$1.00/1M（见notes）
+Gemini 3.x,Gemini 3 Flash Preview,gemini-3-flash-preview,Google Vertex AI,Google Cloud,Global,Standard,Audio input only,1,0.1,,,,,,,,,https://cloud.google.com/vertex-ai/generative-ai/pricing,与上一行同模型拆分模态
+Gemini 3.x,Gemini 3.1 Flash-Lite Preview,gemini-3.1-flash-lite-preview,Google Vertex AI,Google Cloud,Global,Standard,Input(text/image/video) + input(audio) + text output,0.25,0.025,1.5,,,,,,0.25,1.5,https://cloud.google.com/vertex-ai/generative-ai/pricing,音频输入为$0.50/1M（见notes）
+Gemini 3.x,Gemini 3.1 Flash-Lite Preview,gemini-3.1-flash-lite-preview,Google Vertex AI,Google Cloud,Global,Standard,Audio input only,0.5,0.05,,,,,,,,,https://cloud.google.com/vertex-ai/generative-ai/pricing,与上一行同模型拆分模态
+,,,,,,,,,,,,,,,,,,,
+Gemini 2.5,Gemini 2.5 Pro,gemini-2.5-pro,Google Vertex AI,Google Cloud,Global,Standard,Text/Image/Video/Audio input + text output,1.25,0.125,10,,,,,,2.5,15,https://cloud.google.com/vertex-ai/generative-ai/pricing,<=200K与>200K分别列示
+Gemini 2.5,Gemini 2.5 Pro Computer Use-Preview,gemini-2.5-pro-computer-use-preview,Google Vertex AI,Google Cloud,Global,Standard,Text/Image/Video/Audio input + text output,1.25,,10,,,,,,2.5,15,https://cloud.google.com/vertex-ai/generative-ai/pricing,该行缓存价N/A
+Gemini 2.5,Gemini 2.5 Flash,gemini-2.5-flash,Google Vertex AI,Google Cloud,Global,Standard,Input(text/image/video) + text output,0.3,0.03,2.5,,,,,,0.3,2.5,https://cloud.google.com/vertex-ai/generative-ai/pricing,
+Gemini 2.5,Gemini 2.5 Flash,gemini-2.5-flash,Google Vertex AI,Google Cloud,Global,Standard,Audio input only,1,0.1,,,,,,,,,https://cloud.google.com/vertex-ai/generative-ai/pricing,同模型拆分模态
+Gemini 2.5,Gemini 2.5 Flash,gemini-2.5-flash,Google Vertex AI,Google Cloud,Global,Standard,Image output only,,,30,,,,,,,,https://cloud.google.com/vertex-ai/generative-ai/pricing,同模型拆分模态
+Gemini 2.5,Gemini 2.5 Flash Live API,gemini-2.5-flash-live-api,Google Vertex AI,Google Cloud,Global,Standard,Input text,0.5,,,,,,,,,,https://cloud.google.com/vertex-ai/generative-ai/pricing,Live API单列价格
+Gemini 2.5,Gemini 2.5 Flash Live API,gemini-2.5-flash-live-api,Google Vertex AI,Google Cloud,Global,Standard,Input audio,3,,,,,,,,,,https://cloud.google.com/vertex-ai/generative-ai/pricing,Live API单列价格
+Gemini 2.5,Gemini 2.5 Flash Live API,gemini-2.5-flash-live-api,Google Vertex AI,Google Cloud,Global,Standard,Input video/image,3,,,,,,,,,,https://cloud.google.com/vertex-ai/generative-ai/pricing,Live API单列价格
+Gemini 2.5,Gemini 2.5 Flash Live API,gemini-2.5-flash-live-api,Google Vertex AI,Google Cloud,Global,Standard,Output text,,,2,,,,,,,,https://cloud.google.com/vertex-ai/generative-ai/pricing,Live API单列价格
+Gemini 2.5,Gemini 2.5 Flash Live API,gemini-2.5-flash-live-api,Google Vertex AI,Google Cloud,Global,Standard,Output audio,,,12,,,,,,,,https://cloud.google.com/vertex-ai/generative-ai/pricing,Live API单列价格
+Gemini 2.5,Gemini 2.5 Flash Lite,gemini-2.5-flash-lite,Google Vertex AI,Google Cloud,Global,Standard,Input(text/image/video) + text output,0.1,0.01,0.4,,,,,,0.1,0.4,https://cloud.google.com/vertex-ai/generative-ai/pricing,
+Gemini 2.5,Gemini 2.5 Flash Lite,gemini-2.5-flash-lite,Google Vertex AI,Google Cloud,Global,Standard,Audio input only,0.3,0.03,,,,,,,,,https://cloud.google.com/vertex-ai/generative-ai/pricing,同模型拆分模态
