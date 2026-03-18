@@ -1,4 +1,4 @@
-﻿类别,模型系列,模型名称,平台,服务渠道,部署范围,计费层级或模式,计费模态或Token类型,输入价格(美元/百万Token),缓存输入价格(美元/百万Token),输出价格(美元/百万Token),5分钟缓存写入价格(美元/百万Token),1小时缓存写入价格(美元/百万Token),缓存命中价格(美元/百万Token),批处理输入价格(美元/百万Token),批处理输出价格(美元/百万Token),长上下文输入价格(美元/百万Token),长上下文输出价格(美元/百万Token),来源链接,备注
+类别,模型系列,模型名称,平台,服务渠道,部署范围,计费层级或模式,计费模态或Token类型,输入价格(美元/百万Token),缓存输入价格(美元/百万Token),输出价格(美元/百万Token),5分钟缓存写入价格(美元/百万Token),1小时缓存写入价格(美元/百万Token),缓存命中价格(美元/百万Token),批处理输入价格(美元/百万Token),批处理输出价格(美元/百万Token),长上下文输入价格(美元/百万Token),长上下文输出价格(美元/百万Token),来源链接,备注
 GPT-5.x,GPT-5.4,gpt-5.4,OpenAI,OpenAI API,Global,Standard,Text tokens,2.5,0.25,15,,,,,,5,22.5,https://platform.openai.com/docs/pricing | https://openai.com/api/pricing/,OpenAI官方标准价；含long-context列
 GPT-5.x,GPT-5.4-pro,gpt-5.4-pro,OpenAI,OpenAI API,Global,Standard,Text tokens,30,,180,,,,,,60,270,https://platform.openai.com/docs/pricing,OpenAI官方标准价；含long-context列
 GPT-5.x,GPT-5.2,gpt-5.2,OpenAI,OpenAI API,Global,Standard,Text tokens,1.75,0.175,14,,,,,,,,https://platform.openai.com/docs/pricing,OpenAI官方标准价
