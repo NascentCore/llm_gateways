@@ -11,7 +11,7 @@ import sys
 import time
 from typing import List
 
-DEFAULT_BASE_URL = "https://llm.sxwl.ai"
+DEFAULT_BASE_URL = "https://llm.sxwl.ai/v1"
 DEFAULT_PROMPT = "你好，请用一句话介绍你自己。"
 DEFAULT_MAX_TOKENS = 64
 
@@ -37,6 +37,10 @@ def _run_one(
             max_tokens=max_tokens,
         )
         elapsed = time.perf_counter() - start
+        if isinstance(resp, str):
+            return False, f"API returned string instead of object: {resp[:200]}", elapsed
+        if not hasattr(resp, "choices"):
+            return False, f"Unexpected response type {type(resp).__name__}: {str(resp)[:200]}", elapsed
         if resp.choices:
             content = (resp.choices[0].message.content or "").strip()
             content_preview = content[:80] + "..." if len(content) > 80 else content
