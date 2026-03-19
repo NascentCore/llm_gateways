@@ -6,9 +6,16 @@ MiniMax,MiniMax M2.1,minimax-m2-1,MiniMax API,MiniMax,Global,Pay-as-you-go,Text 
 MiniMax,MiniMax M2 Her,minimax-m2-her,MiniMax API,MiniMax,Global,Pay-as-you-go,Text tokens,0.3,,1.2,,,,,,,,https://platform.minimax.io/docs/pricing/overview | https://www.minimax.io/pricing,MiniMax官方按量计费
 MiniMax,MiniMax M1,minimax-m1,MiniMax API,MiniMax,Global,Pay-as-you-go,Text tokens,0.4,,1.76,,,,,,,,https://platform.minimax.io/docs/pricing/overview | https://www.minimax.io/pricing,MiniMax官方按量计费
 ,,,,,,,,,,,,,,,,,,,
+DeepSeek,DeepSeek-V3.2,deepseek-chat,DeepSeek API,DeepSeek,Global,Pay-as-you-go,Text tokens,2,,3,,,,0.2,,,,https://api-docs.deepseek.com/zh-cn/quick_start/pricing/,价格单位为元/百万Token；128K上下文；非思考模式；支持上下文缓存
+DeepSeek,DeepSeek-V3.2,deepseek-reasoner,DeepSeek API,DeepSeek,Global,Pay-as-you-go,Text tokens,2,,3,,,,0.2,,,,https://api-docs.deepseek.com/zh-cn/quick_start/pricing/,价格单位为元/百万Token；128K上下文；思考模式；输出32K/64K；支持上下文缓存
+,,,,,,,,,,,,,,,,,,,
 豆包,豆包通用模型-Pro,豆包Pro,火山方舟,字节跳动,中国内地,按量后付费,Text tokens,4,,16,,,,,,,,https://www.volcengine.com/docs/82379/1099320,价格单位为元/百万Token
 豆包,豆包通用模型-Lite,豆包Lite,火山方舟,字节跳动,中国内地,按量后付费,Text tokens,0.8,,2,,,,,,,,https://www.volcengine.com/docs/82379/1099320,价格单位为元/百万Token
 豆包,豆包专业代码模型,豆包代码,火山方舟,字节跳动,中国内地,按量后付费,Text tokens,4,,12,,,,,,,,https://www.volcengine.com/docs/82379/1099320,价格单位为元/百万Token
+DeepSeek,DeepSeek-R1,deepseek-r1,火山方舟,火山引擎,中国内地,按量后付费,Text tokens,4,,16,,,,,,,,https://www.volcengine.com/docs/82379/1544106,价格单位为元/百万Token；火山托管
+DeepSeek,DeepSeek-V3,deepseek-v3,火山方舟,火山引擎,中国内地,按量后付费,Text tokens,2,,8,,,,,,,,https://www.volcengine.com/docs/82379/1544106,价格单位为元/百万Token；火山托管
+DeepSeek,DeepSeek-R1-Distill-Qwen-32B,deepseek-r1-distill-qwen-32b,火山方舟,火山引擎,中国内地,按量后付费,Text tokens,1.5,,6,,,,,,,,https://www.volcengine.com/docs/82379/1544106,价格单位为元/百万Token；火山托管
+DeepSeek,DeepSeek-R1-Distill-Qwen-7B,deepseek-r1-distill-qwen-7b,火山方舟,火山引擎,中国内地,按量后付费,Text tokens,0.6,,2.4,,,,,,,,https://www.volcengine.com/docs/82379/1544106,价格单位为元/百万Token；火山托管
 ,,,,,,,,,,,,,,,,,,,
 通义千问,千问Max,qwen3-max,阿里云百炼,阿里云,中国内地,Standard,Text tokens,2.4,,9.6,,,,,,,,https://help.aliyun.com/zh/dashscope/developer-reference/tongyi-qianwen-vl-plus-pricing,价格单位为元/百万Token；支持Batch半价、上下文缓存
 通义千问,千问Max,qwen-max-latest,阿里云百炼,阿里云,中国内地,Standard,Text tokens,2.4,,9.6,,,,,,,,https://help.aliyun.com/zh/dashscope/developer-reference/tongyi-qianwen-vl-plus-pricing,价格单位为元/百万Token
@@ -16,12 +23,34 @@ MiniMax,MiniMax M1,minimax-m1,MiniMax API,MiniMax,Global,Pay-as-you-go,Text toke
 通义千问,千问Flash,qwen3.5-flash,阿里云百炼,阿里云,中国内地,Standard,Text tokens,0.3,,0.6,,,,,,,,https://help.aliyun.com/zh/dashscope/developer-reference/tongyi-qianwen-vl-plus-pricing,价格单位为元/百万Token；非思考模式
 通义千问,千问Flash,qwen3.5-flash,阿里云百炼,阿里云,中国内地,Standard,Text tokens,0.3,,3,,,,,,,,https://help.aliyun.com/zh/dashscope/developer-reference/tongyi-qianwen-vl-plus-pricing,价格单位为元/百万Token；思考模式输出
 通义千问,千问Turbo,qwen-turbo-latest,阿里云百炼,阿里云,中国内地,Standard,Text tokens,0.367,,1.468,,,,,,,,https://help.aliyun.com/zh/dashscope/developer-reference/tongyi-qianwen-vl-plus-pricing,价格单位为元/百万Token；阶梯价
+DeepSeek,DeepSeek-V3.2,deepseek-v3.2,阿里云百炼,阿里云,中国内地,Standard,Text tokens,2,,3,,,,,,,,https://help.aliyun.com/zh/dashscope/developer-reference/tongyi-qianwen-vl-plus-pricing,价格单位为元/百万Token；支持上下文缓存
+DeepSeek,DeepSeek-V3.2-Exp,deepseek-v3.2-exp,阿里云百炼,阿里云,中国内地,Standard,Text tokens,2,,3,,,,,,,,https://help.aliyun.com/zh/dashscope/developer-reference/tongyi-qianwen-vl-plus-pricing,价格单位为元/百万Token
+DeepSeek,DeepSeek-V3.1,deepseek-v3.1,阿里云百炼,阿里云,中国内地,Standard,Text tokens,4,,12,,,,,,,,https://help.aliyun.com/zh/dashscope/developer-reference/tongyi-qianwen-vl-plus-pricing,价格单位为元/百万Token
+DeepSeek,DeepSeek-R1,deepseek-r1,阿里云百炼,阿里云,中国内地,Standard,Text tokens,4,,16,,,,,,,,https://help.aliyun.com/zh/dashscope/developer-reference/tongyi-qianwen-vl-plus-pricing,价格单位为元/百万Token；支持Batch半价
+DeepSeek,DeepSeek-R1-0528,deepseek-r1-0528,阿里云百炼,阿里云,中国内地,Standard,Text tokens,4,,16,,,,,,,,https://help.aliyun.com/zh/dashscope/developer-reference/tongyi-qianwen-vl-plus-pricing,价格单位为元/百万Token
+DeepSeek,DeepSeek-V3,deepseek-v3,阿里云百炼,阿里云,中国内地,Standard,Text tokens,2,,8,,,,,,,,https://help.aliyun.com/zh/dashscope/developer-reference/tongyi-qianwen-vl-plus-pricing,价格单位为元/百万Token；支持Batch半价
+DeepSeek,DeepSeek-R1-Distill-Qwen-7B,deepseek-r1-distill-qwen-7b,阿里云百炼,阿里云,中国内地,Standard,Text tokens,0.5,,1,,,,,,,,https://help.aliyun.com/zh/dashscope/developer-reference/tongyi-qianwen-vl-plus-pricing,价格单位为元/百万Token
+DeepSeek,DeepSeek-R1-Distill-Qwen-14B,deepseek-r1-distill-qwen-14b,阿里云百炼,阿里云,中国内地,Standard,Text tokens,1,,3,,,,,,,,https://help.aliyun.com/zh/dashscope/developer-reference/tongyi-qianwen-vl-plus-pricing,价格单位为元/百万Token
+DeepSeek,DeepSeek-R1-Distill-Qwen-32B,deepseek-r1-distill-qwen-32b,阿里云百炼,阿里云,中国内地,Standard,Text tokens,2,,6,,,,,,,,https://help.aliyun.com/zh/dashscope/developer-reference/tongyi-qianwen-vl-plus-pricing,价格单位为元/百万Token
+Kimi,Kimi K2.5,kimi-k2.5,阿里云百炼,阿里云,中国内地,Standard,Text tokens,4,,21,,,,,,,,https://help.aliyun.com/zh/dashscope/developer-reference/tongyi-qianwen-vl-plus-pricing,价格单位为元/百万Token；月之暗面
+Kimi,Kimi K2 Thinking,kimi-k2-thinking,阿里云百炼,阿里云,中国内地,Standard,Text tokens,4,,16,,,,,,,,https://help.aliyun.com/zh/dashscope/developer-reference/tongyi-qianwen-vl-plus-pricing,价格单位为元/百万Token；月之暗面
+Kimi,Kimi K2 Instruct,Moonshot-Kimi-K2-Instruct,阿里云百炼,阿里云,中国内地,Standard,Text tokens,4,,16,,,,,,,,https://help.aliyun.com/zh/dashscope/developer-reference/tongyi-qianwen-vl-plus-pricing,价格单位为元/百万Token；月之暗面
+MiniMax,MiniMax M2.5,MiniMax-M2.5,阿里云百炼,阿里云,中国内地,Standard,Text tokens,2.1,,8.4,,,,,,,,https://help.aliyun.com/zh/dashscope/developer-reference/tongyi-qianwen-vl-plus-pricing,价格单位为元/百万Token；稀宇科技；仅思考模式
+MiniMax,MiniMax M2.1,MiniMax-M2.1,阿里云百炼,阿里云,中国内地,Standard,Text tokens,2.1,,8.4,,,,,,,,https://help.aliyun.com/zh/dashscope/developer-reference/tongyi-qianwen-vl-plus-pricing,价格单位为元/百万Token；稀宇科技；仅思考模式
 ,,,,,,,,,,,,,,,,,,,
 文心一言,ERNIE 5.0,ernie-5.0,千帆大模型平台,百度,中国内地,按量后付费,Text tokens,6,,24,,,,,,,,https://cloud.baidu.com/doc/qianfan/s/wmh4sv6ya,价格单位为元/百万Token
 文心一言,ERNIE 4.5 Turbo,ernie-4.5-turbo-128k,千帆大模型平台,百度,中国内地,按量后付费,Text tokens,0.8,,3.2,,,,,,,,https://cloud.baidu.com/doc/qianfan/s/wmh4sv6ya,价格单位为元/百万Token；128K上下文
 文心一言,ERNIE 4.5,ernie-4.5,千帆大模型平台,百度,中国内地,按量后付费,Text tokens,4,,16,,,,,,,,https://cloud.baidu.com/doc/qianfan/s/wmh4sv6ya,价格单位为元/百万Token
 文心一言,ERNIE Speed Pro,ernie-speed-pro-128k,千帆大模型平台,百度,中国内地,按量后付费,Text tokens,0.3,,0.6,,,,,,,,https://cloud.baidu.com/doc/qianfan/s/wmh4sv6ya,价格单位为元/百万Token；128K上下文
 文心一言,ERNIE Lite Pro,ernie-lite-pro-128k,千帆大模型平台,百度,中国内地,按量后付费,Text tokens,0.2,,0.4,,,,,,,,https://cloud.baidu.com/doc/qianfan/s/wmh4sv6ya,价格单位为元/百万Token；128K上下文
+DeepSeek,DeepSeek-R1,deepseek-r1,千帆大模型平台,百度,中国内地,按量后付费,Text tokens,2,,8,,,,,,,,https://ai.baidu.com/ai-doc/WENXINWORKSHOP/qm6oyumhw,价格单位为元/百万Token；千帆托管
+DeepSeek,DeepSeek-V3,deepseek-v3,千帆大模型平台,百度,中国内地,按量后付费,Text tokens,0.8,,1.6,,,,,,,,https://ai.baidu.com/ai-doc/WENXINWORKSHOP/qm6oyumhw,价格单位为元/百万Token；千帆托管
+GLM,GLM-5,glm-5,千帆大模型平台,百度,中国内地,按量后付费,Text tokens,4,,18,,,,,,,,https://cloud.baidu.com/doc/qianfan/s/wmh4sv6ya,价格单位为元/百万Token；智谱；输入≤32k
+GLM,GLM-4.7,glm-4.7,千帆大模型平台,百度,中国内地,按量后付费,Text tokens,2,,8,,,,,,,,https://cloud.baidu.com/doc/qianfan/s/wmh4sv6ya,价格单位为元/百万Token；智谱；主档位
+Kimi,Kimi K2.5,kimi-k2.5,千帆大模型平台,百度,中国内地,按量后付费,Text tokens,4,,21,,,,,,,,https://cloud.baidu.com/doc/qianfan/s/wmh4sv6ya,价格单位为元/百万Token；月之暗面
+Kimi,Kimi K2 Instruct,kimi-k2-instruct,千帆大模型平台,百度,中国内地,按量后付费,Text tokens,4,,16,,,,,,,,https://cloud.baidu.com/doc/qianfan/s/wmh4sv6ya,价格单位为元/百万Token；月之暗面
+MiniMax,MiniMax M2.5,minimax-m2.5,千帆大模型平台,百度,中国内地,按量后付费,Text tokens,2.1,,8.4,,,,,,,,https://cloud.baidu.com/doc/qianfan/s/wmh4sv6ya,价格单位为元/百万Token；稀宇科技
+MiniMax,MiniMax M2.1,minimax-m2.1,千帆大模型平台,百度,中国内地,按量后付费,Text tokens,2.1,,8.4,,,,,,,,https://cloud.baidu.com/doc/qianfan/s/wmh4sv6ya,价格单位为元/百万Token；稀宇科技
 ,,,,,,,,,,,,,,,,,,,
 混元,Tencent HY 2.0 Think,tencent-hy-2.0-think,腾讯混元,腾讯云,中国内地,按量后付费,Text tokens,3.975,,15.9,,,,,,,,https://cloud.tencent.com/document/product/1729/97731,价格单位为元/百万Token；输入≤32k
 混元,Tencent HY 2.0 Think,tencent-hy-2.0-think,腾讯混元,腾讯云,中国内地,按量后付费,Text tokens,5.3,,21.2,,,,,,,,https://cloud.tencent.com/document/product/1729/97731,价格单位为元/百万Token；32k<输入≤128k
@@ -39,6 +68,12 @@ MiniMax,MiniMax M1,minimax-m1,MiniMax API,MiniMax,Global,Pay-as-you-go,Text toke
 混元,Hunyuan-turbos-vision-video,hunyuan-turbos-vision-video,腾讯混元,腾讯云,中国内地,按量后付费,Text tokens,3,,9,,,,,,,,https://cloud.tencent.com/document/product/1729/97731,价格单位为元/百万Token；多模态视频
 混元,Hunyuan-embedding,hunyuan-embedding,腾讯混元,腾讯云,中国内地,按量后付费,Text tokens,0.7,,0.7,,,,,,,,https://cloud.tencent.com/document/product/1729/97731,价格单位为元/百万Token；Embedding
 混元,Hunyuan-lite,hunyuan-lite,腾讯混元,腾讯云,中国内地,按量后付费,Text tokens,0,,0,,,,,,,,https://cloud.tencent.com/document/product/1729/97731,价格单位为元/百万Token；免费使用
+DeepSeek,DeepSeek-R1,deepseek-r1,知识引擎原子能力,腾讯云,中国内地,按量后付费,Text tokens,4,,16,,,,,,,,https://cloud.tencent.com/document/product/1772/116385,价格单位为元/百万Token；思维链按输出计费
+DeepSeek,DeepSeek-V3,deepseek-v3,知识引擎原子能力,腾讯云,中国内地,按量后付费,Text tokens,2,,8,,,,,,,,https://cloud.tencent.com/document/product/1772/116385,价格单位为元/百万Token
+DeepSeek,DeepSeek-V3-0324,deepseek-v3-0324,知识引擎原子能力,腾讯云,中国内地,按量后付费,Text tokens,2,,8,,,,,,,,https://cloud.tencent.com/document/product/1772/116385,价格单位为元/百万Token
+GLM,GLM-5,glm-5,智能体开发平台,腾讯云,中国内地,按量后付费,Text tokens,6,,22,,,,,,,,https://cloud.tencent.com/document/product/1759/127342,价格单位为元/百万Token；智谱；2026年3月正式计费
+MiniMax,MiniMax M2.5,minimax-m2.5,智能体开发平台,腾讯云,中国内地,按量后付费,Text tokens,2.1,,8.4,,,,,,,,https://cloud.tencent.com/document/product/1759/127342,价格单位为元/百万Token；稀宇科技
+Kimi,Kimi K2.5,kimi-k2.5,智能体开发平台,腾讯云,中国内地,按量后付费,Text tokens,4,,21,,,,,,,,https://cloud.tencent.com/document/product/1759/127342,价格单位为元/百万Token；月之暗面
 ,,,,,,,,,,,,,,,,,,,
 Step,step-3.5-flash,step-3.5-flash,阶跃星辰开放平台,阶跃星辰,中国内地,按量计费,Text tokens,0.7,0.14,2.1,,,,,,,,https://platform.stepfun.com/docs/pricing/details,价格单位为元/百万Token；推理大模型
 Step,step-r1-v-mini,step-r1-v-mini,阶跃星辰开放平台,阶跃星辰,中国内地,按量计费,Text tokens,2.5,0.5,8,,,,,,,,https://platform.stepfun.com/docs/pricing/details,价格单位为元/百万Token；推理大模型
