@@ -1,0 +1,661 @@
+{
+  "meta": {
+    "description": "国产大模型原厂官方定价参考",
+    "currency": "CNY",
+    "currency_name": "人民币",
+    "price_unit": "CNY/百万tokens",
+    "token_unit": "百万tokens",
+    "last_updated": "2026-03-20",
+    "source_note": "所有定价均来自模型供应商官方价格页面，单位均为人民币（CNY）"
+  },
+  "providers": [
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "platform": "DeepSeek API",
+      "currency": "CNY",
+      "source_url": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+      "models": [
+        {
+          "model_id": "deepseek-chat",
+          "display_name": "DeepSeek-V3.2（非思考模式）",
+          "context_length": "128K",
+          "pricing": {
+            "input_per_million_tokens": 2,
+            "input_cache_hit_per_million_tokens": 0.2,
+            "output_per_million_tokens": 3
+          },
+          "notes": "128K上下文；支持上下文缓存"
+        },
+        {
+          "model_id": "deepseek-reasoner",
+          "display_name": "DeepSeek-V3.2（思考模式）",
+          "context_length": "128K",
+          "pricing": {
+            "input_per_million_tokens": 2,
+            "input_cache_hit_per_million_tokens": 0.2,
+            "output_per_million_tokens": 3
+          },
+          "notes": "思考模式；输出默认32K最大64K；支持上下文缓存"
+        }
+      ]
+    },
+    {
+      "id": "minimax",
+      "name": "MiniMax",
+      "platform": "MiniMax API",
+      "currency": "CNY",
+      "source_url": "https://platform.minimaxi.com/docs/guides/pricing-paygo",
+      "models": [
+        {
+          "model_id": "MiniMax-M2.7",
+          "display_name": "MiniMax-M2.7",
+          "pricing": {
+            "input_per_million_tokens": 2.1,
+            "output_per_million_tokens": 8.4,
+            "cache_read_per_million_tokens": 0.42,
+            "cache_write_per_million_tokens": 2.625
+          }
+        },
+        {
+          "model_id": "MiniMax-M2.7-highspeed",
+          "display_name": "MiniMax-M2.7-highspeed",
+          "pricing": {
+            "input_per_million_tokens": 4.2,
+            "output_per_million_tokens": 16.8,
+            "cache_read_per_million_tokens": 0.42,
+            "cache_write_per_million_tokens": 2.625
+          }
+        },
+        {
+          "model_id": "MiniMax-M2.5",
+          "display_name": "MiniMax-M2.5",
+          "pricing": {
+            "input_per_million_tokens": 2.1,
+            "output_per_million_tokens": 8.4,
+            "cache_read_per_million_tokens": 0.21,
+            "cache_write_per_million_tokens": 2.625
+          }
+        },
+        {
+          "model_id": "MiniMax-M2.5-highspeed",
+          "display_name": "MiniMax-M2.5-highspeed",
+          "pricing": {
+            "input_per_million_tokens": 4.2,
+            "output_per_million_tokens": 16.8,
+            "cache_read_per_million_tokens": 0.21,
+            "cache_write_per_million_tokens": 2.625
+          }
+        },
+        {
+          "model_id": "M2-her",
+          "display_name": "M2-her",
+          "pricing": {
+            "input_per_million_tokens": 2.1,
+            "output_per_million_tokens": 8.4
+          },
+          "notes": "不支持上下文缓存"
+        },
+        {
+          "model_id": "MiniMax-M2.1",
+          "display_name": "MiniMax-M2.1（历史模型）",
+          "pricing": {
+            "input_per_million_tokens": 2.1,
+            "output_per_million_tokens": 8.4,
+            "cache_read_per_million_tokens": 0.21,
+            "cache_write_per_million_tokens": 2.625
+          }
+        },
+        {
+          "model_id": "MiniMax-M2.1-highspeed",
+          "display_name": "MiniMax-M2.1-highspeed（历史模型）",
+          "pricing": {
+            "input_per_million_tokens": 4.2,
+            "output_per_million_tokens": 16.8,
+            "cache_read_per_million_tokens": 0.21,
+            "cache_write_per_million_tokens": 2.625
+          }
+        },
+        {
+          "model_id": "MiniMax-M2",
+          "display_name": "MiniMax-M2（历史模型）",
+          "pricing": {
+            "input_per_million_tokens": 2.1,
+            "output_per_million_tokens": 8.4,
+            "cache_read_per_million_tokens": 0.21,
+            "cache_write_per_million_tokens": 2.625
+          }
+        }
+      ],
+      "non_text_products": {
+        "currency": "CNY",
+        "speech": [
+          {
+            "models": ["speech-2.8-hd", "speech-2.6-hd", "speech-02-hd"],
+            "unit": "CNY/万字符",
+            "sync_t2a": 3.5,
+            "async_t2a": 3.5
+          },
+          {
+            "models": ["speech-2.8-turbo", "speech-2.6-turbo", "speech-02-turbo"],
+            "unit": "CNY/万字符",
+            "sync_t2a": 2,
+            "async_t2a": 2
+          }
+        ],
+        "image": [
+          {
+            "models": ["image-01", "image-01-live"],
+            "unit": "元/张",
+            "price": 0.025
+          }
+        ],
+        "video": [
+          {"model": "MiniMax-Hailuo-2.3-Fast", "function": "图生视频 768P 6s", "unit": "CNY/视频", "price": 1.35},
+          {"model": "MiniMax-Hailuo-2.3-Fast", "function": "图生视频 768P 10s", "unit": "CNY/视频", "price": 2.25},
+          {"model": "MiniMax-Hailuo-2.3-Fast", "function": "图生视频 1080P 6s", "unit": "CNY/视频", "price": 2.31},
+          {"model": "MiniMax-Hailuo-2.3/MiniMax-Hailuo-02", "function": "文生视频/图生视频 768P 6s", "unit": "CNY/视频", "price": 2.0},
+          {"model": "MiniMax-Hailuo-2.3/MiniMax-Hailuo-02", "function": "文生视频/图生视频 768P 10s", "unit": "CNY/视频", "price": 4.0},
+          {"model": "MiniMax-Hailuo-2.3/MiniMax-Hailuo-02", "function": "文生视频/图生视频 1080P 6s", "unit": "CNY/视频", "price": 3.5},
+          {"model": "MiniMax-Hailuo-02", "function": "图生视频 512P 6s", "unit": "CNY/视频", "price": 0.6},
+          {"model": "MiniMax-Hailuo-02", "function": "图生视频 512P 10s", "unit": "CNY/视频", "price": 1.0}
+        ],
+        "music": [
+          {"model": "Music-2.5+", "unit": "CNY/首", "price": 1.0},
+          {"model": "Music-2.5", "unit": "CNY/首", "price": 1.0},
+          {"model": "Music-2.0", "unit": "CNY/首", "price": 0.25},
+          {"model": "歌词生成", "unit": "CNY/首", "price": 0.05}
+        ]
+      }
+    },
+    {
+      "id": "moonshot",
+      "name": "月之暗面",
+      "platform": "Kimi开放平台",
+      "currency": "CNY",
+      "source_url": "https://platform.moonshot.cn/docs/pricing/chat",
+      "models": [
+        {
+          "model_id": "moonshot-v1-8k",
+          "display_name": "Kimi 8k",
+          "context_length": "8K",
+          "pricing": {
+            "unified_per_million_tokens": 12
+          },
+          "notes": "输入输出合并计费"
+        },
+        {
+          "model_id": "moonshot-v1-32k",
+          "display_name": "Kimi 32k",
+          "context_length": "32K",
+          "pricing": {
+            "unified_per_million_tokens": 24
+          },
+          "notes": "长文本；输入输出合并计费"
+        },
+        {
+          "model_id": "moonshot-v1-128k",
+          "display_name": "Kimi 128k",
+          "context_length": "128K",
+          "pricing": {
+            "unified_per_million_tokens": 60
+          },
+          "notes": "超长文档；输入输出合并计费"
+        },
+        {
+          "model_id": "moonshot-v1-8k-vision-preview",
+          "display_name": "Kimi Vision 8k",
+          "context_length": "8K",
+          "pricing": {
+            "unified_per_million_tokens": 12
+          },
+          "notes": "多模态图片理解；图片按1024 tokens计入"
+        },
+        {
+          "model_id": "moonshot-v1-32k-vision-preview",
+          "display_name": "Kimi Vision 32k",
+          "context_length": "32K",
+          "pricing": {
+            "unified_per_million_tokens": 24
+          },
+          "notes": "多模态"
+        },
+        {
+          "model_id": "moonshot-v1-128k-vision-preview",
+          "display_name": "Kimi Vision 128k",
+          "context_length": "128K",
+          "pricing": {
+            "unified_per_million_tokens": 60
+          },
+          "notes": "多模态"
+        }
+      ],
+      "notes": "K2/K2.5 等新模型定价请以 platform.moonshot.cn/docs/pricing/chat 为准"
+    },
+    {
+      "id": "volcengine",
+      "name": "豆包",
+      "platform": "火山方舟",
+      "currency": "CNY",
+      "source_url": "https://www.volcengine.com/docs/82379/1099320",
+      "models": [
+        {
+          "model_id": "豆包Pro",
+          "display_name": "豆包通用模型-Pro",
+          "pricing": {
+            "input_per_million_tokens": 4,
+            "output_per_million_tokens": 16
+          }
+        },
+        {
+          "model_id": "豆包Lite",
+          "display_name": "豆包通用模型-Lite",
+          "pricing": {
+            "input_per_million_tokens": 0.8,
+            "output_per_million_tokens": 2
+          }
+        },
+        {
+          "model_id": "豆包代码",
+          "display_name": "豆包专业代码模型",
+          "pricing": {
+            "input_per_million_tokens": 4,
+            "output_per_million_tokens": 12
+          }
+        }
+      ]
+    },
+    {
+      "id": "alibaba",
+      "name": "通义千问",
+      "platform": "阿里云百炼",
+      "currency": "CNY",
+      "source_url": "https://help.aliyun.com/zh/dashscope/developer-reference/tongyi-qianwen-vl-plus-pricing",
+      "models": [
+        {
+          "model_id": "qwen3-max",
+          "display_name": "千问Max",
+          "pricing": {
+            "input_per_million_tokens": 2.4,
+            "output_per_million_tokens": 9.6
+          },
+          "notes": "支持Batch半价、上下文缓存"
+        },
+        {
+          "model_id": "qwen3.5-plus",
+          "display_name": "千问Plus",
+          "pricing": {
+            "input_per_million_tokens": 1.52,
+            "output_per_million_tokens": 3.8
+          },
+          "notes": "支持Batch半价、上下文缓存"
+        },
+        {
+          "model_id": "qwen3.5-flash",
+          "display_name": "千问Flash",
+          "pricing": {
+            "input_per_million_tokens": 0.3,
+            "output_per_million_tokens": 0.6
+          },
+          "notes": "非思考模式"
+        },
+        {
+          "model_id": "qwen-turbo-latest",
+          "display_name": "千问Turbo",
+          "pricing": {
+            "input_per_million_tokens": 0.367,
+            "output_per_million_tokens": 1.468
+          },
+          "notes": "阶梯价"
+        }
+      ]
+    },
+    {
+      "id": "baidu",
+      "name": "文心一言",
+      "platform": "千帆大模型平台",
+      "currency": "CNY",
+      "source_url": "https://cloud.baidu.com/doc/qianfan/s/wmh4sv6ya",
+      "models": [
+        {
+          "model_id": "ernie-5.0",
+          "display_name": "ERNIE 5.0",
+          "pricing": {
+            "input_per_million_tokens": 6,
+            "output_per_million_tokens": 24
+          }
+        },
+        {
+          "model_id": "ernie-4.5-turbo-128k",
+          "display_name": "ERNIE 4.5 Turbo",
+          "context_length": "128K",
+          "pricing": {
+            "input_per_million_tokens": 0.8,
+            "output_per_million_tokens": 3.2
+          }
+        },
+        {
+          "model_id": "ernie-4.5",
+          "display_name": "ERNIE 4.5",
+          "pricing": {
+            "input_per_million_tokens": 4,
+            "output_per_million_tokens": 16
+          }
+        },
+        {
+          "model_id": "ernie-speed-pro-128k",
+          "display_name": "ERNIE Speed Pro",
+          "context_length": "128K",
+          "pricing": {
+            "input_per_million_tokens": 0.3,
+            "output_per_million_tokens": 0.6
+          }
+        },
+        {
+          "model_id": "ernie-lite-pro-128k",
+          "display_name": "ERNIE Lite Pro",
+          "context_length": "128K",
+          "pricing": {
+            "input_per_million_tokens": 0.2,
+            "output_per_million_tokens": 0.4
+          }
+        }
+      ]
+    },
+    {
+      "id": "tencent",
+      "name": "混元",
+      "platform": "腾讯混元",
+      "currency": "CNY",
+      "source_url": "https://cloud.tencent.com/document/product/1729/97731",
+      "models": [
+        {
+          "model_id": "tencent-hy-2.0-think",
+          "display_name": "Tencent HY 2.0 Think",
+          "pricing": {
+            "tiers": [
+              {"input_range": "(0, 32k]", "input_per_million_tokens": 3.975, "output_per_million_tokens": 15.9},
+              {"input_range": "(32k, 128k]", "input_per_million_tokens": 5.3, "output_per_million_tokens": 21.2}
+            ]
+          }
+        },
+        {
+          "model_id": "tencent-hy-2.0-instruct",
+          "display_name": "Tencent HY 2.0 Instruct",
+          "pricing": {
+            "tiers": [
+              {"input_range": "(0, 32k]", "input_per_million_tokens": 3.18, "output_per_million_tokens": 7.95},
+              {"input_range": "(32k, 128k]", "input_per_million_tokens": 4.505, "output_per_million_tokens": 11.13}
+            ]
+          }
+        },
+        {
+          "model_id": "hunyuan-t1",
+          "display_name": "Hunyuan-T1",
+          "pricing": {
+            "input_per_million_tokens": 1,
+            "output_per_million_tokens": 4
+          }
+        },
+        {
+          "model_id": "hunyuan-turbos",
+          "display_name": "Hunyuan-TurboS",
+          "pricing": {
+            "input_per_million_tokens": 0.8,
+            "output_per_million_tokens": 2
+          }
+        },
+        {
+          "model_id": "hunyuan-a13b",
+          "display_name": "Hunyuan-a13b",
+          "pricing": {
+            "input_per_million_tokens": 0.5,
+            "output_per_million_tokens": 2
+          }
+        },
+        {
+          "model_id": "hunyuan-large-role",
+          "display_name": "Hunyuan-large-role",
+          "pricing": {
+            "input_per_million_tokens": 2.4,
+            "output_per_million_tokens": 9.6
+          }
+        },
+        {
+          "model_id": "hunyuan-translation",
+          "display_name": "Hunyuan-translation",
+          "pricing": {
+            "input_per_million_tokens": 1.2,
+            "output_per_million_tokens": 3.6
+          },
+          "notes": "翻译模型"
+        },
+        {
+          "model_id": "hunyuan-translation-lite",
+          "display_name": "Hunyuan-translation-lite",
+          "pricing": {
+            "input_per_million_tokens": 1,
+            "output_per_million_tokens": 3
+          },
+          "notes": "翻译模型"
+        },
+        {
+          "model_id": "tencent-hy-vision-1.5-instruct",
+          "display_name": "Tencent HY Vision 1.5 Instruct",
+          "pricing": {
+            "input_per_million_tokens": 3,
+            "output_per_million_tokens": 9
+          },
+          "notes": "多模态"
+        },
+        {
+          "model_id": "hunyuan-turbos-vision",
+          "display_name": "Hunyuan-turbos-vision",
+          "pricing": {
+            "input_per_million_tokens": 3,
+            "output_per_million_tokens": 9
+          },
+          "notes": "多模态"
+        },
+        {
+          "model_id": "hunyuan-t1-vision",
+          "display_name": "Hunyuan-t1-vision",
+          "pricing": {
+            "input_per_million_tokens": 3,
+            "output_per_million_tokens": 9
+          },
+          "notes": "多模态"
+        },
+        {
+          "model_id": "hunyuan-turbos-vision-video",
+          "display_name": "Hunyuan-turbos-vision-video",
+          "pricing": {
+            "input_per_million_tokens": 3,
+            "output_per_million_tokens": 9
+          },
+          "notes": "多模态视频"
+        },
+        {
+          "model_id": "hunyuan-embedding",
+          "display_name": "Hunyuan-embedding",
+          "pricing": {
+            "input_per_million_tokens": 0.7,
+            "output_per_million_tokens": 0.7
+          },
+          "notes": "Embedding"
+        },
+        {
+          "model_id": "hunyuan-lite",
+          "display_name": "Hunyuan-lite",
+          "pricing": {
+            "input_per_million_tokens": 0,
+            "output_per_million_tokens": 0
+          },
+          "notes": "免费使用"
+        }
+      ]
+    },
+    {
+      "id": "stepfun",
+      "name": "阶跃星辰",
+      "platform": "阶跃星辰开放平台",
+      "currency": "CNY",
+      "source_url": "https://platform.stepfun.com/docs/pricing/details",
+      "models": [
+        {
+          "model_id": "step-3.5-flash",
+          "display_name": "step-3.5-flash",
+          "pricing": {
+            "input_per_million_tokens": 0.7,
+            "input_cache_hit_per_million_tokens": 0.14,
+            "output_per_million_tokens": 2.1
+          },
+          "notes": "推理大模型"
+        },
+        {
+          "model_id": "step-r1-v-mini",
+          "display_name": "step-r1-v-mini",
+          "pricing": {
+            "input_per_million_tokens": 2.5,
+            "input_cache_hit_per_million_tokens": 0.5,
+            "output_per_million_tokens": 8
+          },
+          "notes": "推理大模型"
+        },
+        {
+          "model_id": "step-3",
+          "display_name": "step-3",
+          "pricing": {
+            "tiers": [
+              {"condition": "输入≤4k 且 输出≤4k", "input_per_million_tokens": 1.5, "input_cache_hit_per_million_tokens": 0.3, "output_per_million_tokens": 4},
+              {"condition": "输入≤4k 且 输出>4k", "input_per_million_tokens": 1.5, "input_cache_hit_per_million_tokens": 0.3, "output_per_million_tokens": 8},
+              {"condition": "4k<输入≤64k", "input_per_million_tokens": 4, "input_cache_hit_per_million_tokens": 0.8, "output_per_million_tokens": 10}
+            ]
+          }
+        },
+        {
+          "model_id": "step-2-mini",
+          "display_name": "step-2-mini",
+          "pricing": {
+            "input_per_million_tokens": 1,
+            "input_cache_hit_per_million_tokens": 0.2,
+            "output_per_million_tokens": 2
+          },
+          "notes": "文本大模型"
+        },
+        {
+          "model_id": "step-2-16k",
+          "display_name": "step-2-16k",
+          "pricing": {
+            "input_per_million_tokens": 38,
+            "input_cache_hit_per_million_tokens": 7.6,
+            "output_per_million_tokens": 120
+          },
+          "notes": "文本大模型"
+        },
+        {
+          "model_id": "step-2-16k-exp",
+          "display_name": "step-2-16k-exp",
+          "pricing": {
+            "input_per_million_tokens": 38,
+            "input_cache_hit_per_million_tokens": 7.6,
+            "output_per_million_tokens": 120
+          }
+        },
+        {
+          "model_id": "step-1o-vision-32k",
+          "display_name": "step-1o-vision-32k",
+          "context_length": "32K",
+          "pricing": {
+            "input_per_million_tokens": 15,
+            "input_cache_hit_per_million_tokens": 3,
+            "output_per_million_tokens": 0.6
+          },
+          "notes": "视觉大模型"
+        },
+        {
+          "model_id": "step-1v-8k",
+          "display_name": "step-1v-8k",
+          "context_length": "8K",
+          "pricing": {
+            "input_per_million_tokens": 5,
+            "input_cache_hit_per_million_tokens": 1,
+            "output_per_million_tokens": 0.2
+          },
+          "notes": "视觉大模型"
+        },
+        {
+          "model_id": "step-1v-32k",
+          "display_name": "step-1v-32k",
+          "context_length": "32K",
+          "pricing": {
+            "input_per_million_tokens": 15,
+            "input_cache_hit_per_million_tokens": 3,
+            "output_per_million_tokens": 0.6
+          },
+          "notes": "视觉大模型"
+        },
+        {
+          "model_id": "step-audio-2",
+          "display_name": "step-audio-2",
+          "pricing": {
+            "input_per_million_tokens": 10,
+            "input_cache_hit_per_million_tokens": 2,
+            "output_per_million_tokens": 70
+          },
+          "notes": "端到端语音模型"
+        },
+        {
+          "model_id": "step-1-8k",
+          "display_name": "step-1-8k",
+          "context_length": "8K",
+          "pricing": {
+            "input_per_million_tokens": 5,
+            "input_cache_hit_per_million_tokens": 1,
+            "output_per_million_tokens": 20
+          }
+        },
+        {
+          "model_id": "step-1-32k",
+          "display_name": "step-1-32k",
+          "context_length": "32K",
+          "pricing": {
+            "input_per_million_tokens": 15,
+            "input_cache_hit_per_million_tokens": 3,
+            "output_per_million_tokens": 70
+          }
+        },
+        {
+          "model_id": "step-1-256k",
+          "display_name": "step-1-256k",
+          "context_length": "256K",
+          "pricing": {
+            "input_per_million_tokens": 95,
+            "input_cache_hit_per_million_tokens": 19,
+            "output_per_million_tokens": 300
+          }
+        },
+        {
+          "model_id": "step-1o-turbo-vision",
+          "display_name": "step-1o-turbo-vision",
+          "pricing": {
+            "input_per_million_tokens": 2.5,
+            "input_cache_hit_per_million_tokens": 0.5,
+            "output_per_million_tokens": 8
+          },
+          "notes": "视觉大模型"
+        },
+        {
+          "model_id": "step-1o-audio",
+          "display_name": "step-1o-audio",
+          "pricing": {
+            "input_per_million_tokens": 25,
+            "input_cache_hit_per_million_tokens": 5,
+            "output_per_million_tokens": 60
+          },
+          "notes": "端到端语音模型"
+        }
+      ]
+    }
+  ]
+}

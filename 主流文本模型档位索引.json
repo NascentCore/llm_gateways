@@ -1,0 +1,195 @@
+{
+  "meta": {
+    "description": "主流文本输入+输出模型高中低档索引，仅记录模型标识，其他信息请 reference 回源文件",
+    "last_updated": "2026-03-20",
+    "reference": {
+      "overseas": "海外模型价格参考.json",
+      "domestic": "国产模型价格参考.json"
+    }
+  },
+  "families": {
+    "Gemini": {
+      "source": "海外模型价格参考.json",
+      "provider_path": "providers[?id=='google-vertex-ai'].models",
+      "latest_version": "3.x",
+      "second_latest_version": "2.5",
+      "tiers": {
+        "latest": {
+          "high": "gemini-3-pro-preview",
+          "medium": "gemini-3-flash-preview",
+          "low": "gemini-3.1-flash-lite-preview"
+        },
+        "second_latest": {
+          "high": "gemini-2.5-pro",
+          "medium": "gemini-2.5-flash",
+          "low": "gemini-2.5-flash-lite"
+        }
+      }
+    },
+    "GPT": {
+      "source": "海外模型价格参考.json",
+      "provider_path": "providers[?id=='openai'].models",
+      "latest_version": "5.4",
+      "second_latest_version": "5.2",
+      "tiers": {
+        "latest": {
+          "high": "gpt-5.4",
+          "medium": "gpt-5-mini",
+          "low": "gpt-5-nano"
+        },
+        "second_latest": {
+          "high": "gpt-5.2",
+          "medium": "gpt-5-mini",
+          "low": "gpt-5-nano"
+        }
+      }
+    },
+    "Claude": {
+      "source": "海外模型价格参考.json",
+      "provider_path": "providers[?id=='anthropic'].models",
+      "latest_version": "4.x",
+      "second_latest_version": null,
+      "tiers": {
+        "latest": {
+          "high": "claude-opus-4-6",
+          "medium": "claude-sonnet-4-6",
+          "low": "claude-haiku-4-5"
+        },
+        "second_latest": null
+      }
+    },
+    "DeepSeek": {
+      "source": "国产模型价格参考.json",
+      "provider_path": "providers[?id=='deepseek'].models",
+      "latest_version": "3.2",
+      "second_latest_version": null,
+      "tiers": {
+        "latest": {
+          "high": "deepseek-reasoner",
+          "medium": "deepseek-chat",
+          "low": null
+        },
+        "second_latest": null
+      },
+      "notes": "思考模式(reasoner)与标准模式(chat)，无传统低档"
+    },
+    "MiniMax": {
+      "source": "国产模型价格参考.json",
+      "provider_path": "providers[?id=='minimax'].models",
+      "latest_version": "2.7",
+      "second_latest_version": "2.5",
+      "tiers": {
+        "latest": {
+          "high": "MiniMax-M2.7",
+          "medium": "MiniMax-M2.5",
+          "low": "MiniMax-M2.1"
+        },
+        "second_latest": {
+          "high": "MiniMax-M2.5",
+          "medium": "MiniMax-M2.1",
+          "low": "MiniMax-M2"
+        }
+      }
+    },
+    "通义千问": {
+      "source": "国产模型价格参考.json",
+      "provider_path": "providers[?id=='alibaba'].models",
+      "latest_version": "3.5",
+      "second_latest_version": "3",
+      "tiers": {
+        "latest": {
+          "high": "qwen3-max",
+          "medium": "qwen3.5-plus",
+          "low": "qwen3.5-flash"
+        },
+        "second_latest": {
+          "high": "qwen3-max",
+          "medium": "qwen3.5-plus",
+          "low": "qwen-turbo-latest"
+        }
+      }
+    },
+    "豆包": {
+      "source": "国产模型价格参考.json",
+      "provider_path": "providers[?id=='volcengine'].models",
+      "latest_version": null,
+      "second_latest_version": null,
+      "tiers": {
+        "latest": {
+          "high": "豆包Pro",
+          "medium": null,
+          "low": "豆包Lite"
+        },
+        "second_latest": null
+      },
+      "notes": "仅高/低两档；豆包代码为专用模型"
+    },
+    "文心一言": {
+      "source": "国产模型价格参考.json",
+      "provider_path": "providers[?id=='baidu'].models",
+      "latest_version": "5.0",
+      "second_latest_version": "4.5",
+      "tiers": {
+        "latest": {
+          "high": "ernie-5.0",
+          "medium": "ernie-4.5-turbo-128k",
+          "low": "ernie-lite-pro-128k"
+        },
+        "second_latest": {
+          "high": "ernie-4.5",
+          "medium": "ernie-4.5-turbo-128k",
+          "low": "ernie-speed-pro-128k"
+        }
+      }
+    },
+    "混元": {
+      "source": "国产模型价格参考.json",
+      "provider_path": "providers[?id=='tencent'].models",
+      "latest_version": "2.0",
+      "second_latest_version": null,
+      "tiers": {
+        "latest": {
+          "high": "tencent-hy-2.0-think",
+          "medium": "tencent-hy-2.0-instruct",
+          "low": "hunyuan-turbos"
+        },
+        "second_latest": null
+      },
+      "notes": "hunyuan-t1、hunyuan-a13b、hunyuan-lite 等见源文件"
+    },
+    "阶跃星辰": {
+      "source": "国产模型价格参考.json",
+      "provider_path": "providers[?id=='stepfun'].models",
+      "latest_version": "3.5",
+      "second_latest_version": "3",
+      "tiers": {
+        "latest": {
+          "high": "step-r1-v-mini",
+          "medium": "step-3.5-flash",
+          "low": "step-2-mini"
+        },
+        "second_latest": {
+          "high": "step-3",
+          "medium": "step-3.5-flash",
+          "low": "step-2-mini"
+        }
+      },
+      "notes": "step-r1-v-mini 为推理模型；step-3 为文本主模型"
+    },
+    "Kimi": {
+      "source": "国产模型价格参考.json",
+      "provider_path": "providers[?id=='moonshot'].models",
+      "latest_version": "v1",
+      "second_latest_version": null,
+      "tiers": {
+        "latest": {
+          "high": "moonshot-v1-128k",
+          "medium": "moonshot-v1-32k",
+          "low": "moonshot-v1-8k"
+        },
+        "second_latest": null
+      },
+      "notes": "源文件仅含 v1 系列；K2/K2.5 定价见 platform.moonshot.cn，kimi-k2.5 见小龙虾优选模型.json"
+    }
+  }
+}

@@ -1,6 +1,0 @@
-类别,模型系列,模型名称,平台,服务渠道,部署范围,计费层级或模式,计费模态或Token类型,输入价格(美元/百万Token),缓存输入价格(美元/百万Token),输出价格(美元/百万Token),5分钟缓存写入价格(美元/百万Token),1小时缓存写入价格(美元/百万Token),缓存命中价格(美元/百万Token),批处理输入价格(美元/百万Token),批处理输出价格(美元/百万Token),长上下文输入价格(美元/百万Token),长上下文输出价格(美元/百万Token),来源链接,备注
-Gemini 3.x,Gemini 3 Pro Preview,google/gemini-3-pro-preview,Google Vertex AI,Google Cloud,Global,Standard,Text/Image/Video/Audio input + text output,2,0.2,12,,,,,,4,18,https://cloud.google.com/vertex-ai/generative-ai/pricing,<=200K与>200K分别列示；原厂价
-Gemini 3.x,Gemini 3 Flash Preview,google/gemini-3-flash-preview,Google Vertex AI,Google Cloud,Global,Standard,Input(text/image/video) + input(audio) + text output,0.5,0.05,3,,,,,,0.5,3,https://cloud.google.com/vertex-ai/generative-ai/pricing,音频输入为$1.00/1M；原厂价
-Kimi,Kimi K2.5,moonshotai/kimi-k2.5,月之暗面,MoonShot,中国内地,Standard,Text tokens,4,,21,,,,,,,,https://help.aliyun.com/zh/dashscope/developer-reference/tongyi-qianwen-vl-plus-pricing,价格单位为元/百万Token；月之暗面；原厂价
-MiniMax,MiniMax M2.5,minimax/minimax-m2.5,MiniMax API,MiniMax,中国内地,Pay-as-you-go,Text tokens,0.25,,0.95,,,,,,,,https://platform.minimax.io/docs/pricing/overview | https://www.minimax.io/pricing,MiniMax官方按量计费；原厂价
-MiniMax,MiniMax M2.7,minimax/minimax-m2.7,OpenRouter,MiniMax,中国内地,Pay-as-you-go,Text tokens,0.3,,1.2,,,,,,,,https://openrouter.ai/minimax/minimax-m2.7,204800 context；支持 reasoning tokens
