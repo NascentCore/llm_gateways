@@ -13,7 +13,7 @@ from typing import List
 
 DEFAULT_BASE_URL = "https://llm.sxwl.ai/v1"
 DEFAULT_PROMPT = "你好，请用一句话介绍你自己。"
-DEFAULT_MAX_TOKENS = 64
+DEFAULT_MAX_TOKENS = 512  # 推理模型（如 Kimi K2.5）需更多 token 用于 reasoning + 回复
 
 
 def _normalize_base_url(url: str) -> str:
@@ -27,15 +27,19 @@ def _run_one(
     model: str,
     prompt: str,
     max_tokens: int,
+    extra_body: dict | None = None,
 ) -> tuple[bool, str, float]:
     """对单个模型发起一次 chat 请求。返回 (成功, 消息, 耗时秒)。"""
     start = time.perf_counter()
     try:
-        resp = client.chat.completions.create(
-            model=model,
-            messages=[{"role": "user", "content": prompt}],
-            max_tokens=max_tokens,
-        )
+        kwargs = {
+            "model": model,
+            "messages": [{"role": "user", "content": prompt}],
+            "max_tokens": max_tokens,
+        }
+        if extra_body:
+            kwargs["extra_body"] = extra_body
+        resp = client.chat.completions.create(**kwargs)
         elapsed = time.perf_counter() - start
         if isinstance(resp, str):
             return False, f"API returned string instead of object: {resp[:200]}", elapsed
@@ -85,7 +89,13 @@ def main() -> None:
         metavar="N",
         help="单次请求最大生成 token 数",
     )
+    parser.add_argument(
+        "--no-thinking",
+        action="store_true",
+        help="禁用推理模型的 thinking 模式（Kimi K2.5 等），传 extra_body={'thinking':{'type':'disabled'}}。需网关转发 extra_body 才生效。",
+    )
     args = parser.parse_args()
+    print(args)
 
     # 解析模型列表：-m a -m b 或 --models a,b
     models: List[str] = []
@@ -108,7 +118,11 @@ def main() -> None:
         sys.exit(2)
 
     base_url = _normalize_base_url(args.base_url)
-    print(f"Testing NewAPI chat: base_url={base_url}, models={', '.join(models)}")
+    extra_body = {"thinking": {"type": "disabled"}} if args.no_thinking else None
+    if extra_body:
+        print(f"Testing NewAPI chat: base_url={base_url}, models={', '.join(models)}, no-thinking=on")
+    else:
+        print(f"Testing NewAPI chat: base_url={base_url}, models={', '.join(models)}")
 
     from openai import OpenAI
 
@@ -119,7 +133,7 @@ def main() -> None:
     )
     passed = 0
     for model in models:
-        ok, msg, elapsed = _run_one(client, model, args.prompt, args.max_tokens)
+        ok, msg, elapsed = _run_one(client, model, args.prompt, args.max_tokens, extra_body)
         if ok:
             print(f"  [{model}] OK ({elapsed:.2f}s): {msg}")
             passed += 1
