@@ -3,3 +3,7 @@
 
 # Env (use .env.example as template)
 .env
+
+*.pyc
+
+.venv
