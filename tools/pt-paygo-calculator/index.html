@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vertex AI PT vs PayGo 成本对比</title>
+  <style>
+    :root {
+      --bg: #0f1419;
+      --panel: #1a2332;
+      --border: #2d3a4d;
+      --text: #e7ecf3;
+      --muted: #8b9cb3;
+      --accent: #5b9fd4;
+      --warn: #e6a23c;
+      --bad: #e85d5d;
+      --good: #67c23a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      max-width: 52rem;
+      margin: 0 auto;
+      padding: 1.5rem 1rem 3rem;
+    }
+    h1 { font-size: 1.35rem; font-weight: 600; margin: 0 0 0.25rem; }
+    .sub { color: var(--muted); font-size: 0.875rem; margin-bottom: 1.5rem; }
+    fieldset {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--panel);
+      margin: 0 0 1rem;
+      padding: 1rem 1rem 0.75rem;
+    }
+    legend { padding: 0 0.5rem; color: var(--accent); font-size: 0.9rem; }
+    label { display: block; font-size: 0.8rem; color: var(--muted); margin-bottom: 0.15rem; }
+    .row { display: grid; grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr)); gap: 0.75rem 1rem; margin-bottom: 0.75rem; }
+    input, select {
+      width: 100%;
+      padding: 0.45rem 0.5rem;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+    input:focus, select:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+    .usage-mode { display: flex; gap: 1.25rem; flex-wrap: wrap; margin-bottom: 0.75rem; }
+    .usage-mode label { display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.9rem; color: var(--text); }
+    .usage-mode input[type="radio"] { width: auto; margin: 0; }
+    #customFields { display: none; }
+    #customFields.visible { display: block; }
+    button {
+      background: var(--accent);
+      color: var(--bg);
+      border: none;
+      padding: 0.55rem 1.25rem;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 0.25rem;
+    }
+    button:hover { filter: brightness(1.08); }
+    #results {
+      margin-top: 1.25rem;
+      padding: 1rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--panel);
+    }
+    #results h2 { font-size: 1rem; margin: 0 0 0.75rem; }
+    .metric { display: flex; justify-content: space-between; gap: 1rem; padding: 0.35rem 0; border-bottom: 1px solid var(--border); font-size: 0.9rem; }
+    .metric:last-child { border-bottom: none; }
+    .metric strong { color: var(--accent); }
+    .bar-wrap { height: 8px; background: var(--border); border-radius: 4px; margin: 0.5rem 0 0.25rem; overflow: hidden; }
+    .bar { height: 100%; background: var(--accent); border-radius: 4px; transition: width 0.2s; }
+    .bar.warn { background: var(--warn); }
+    .bar.bad { background: var(--bad); }
+    .alert { margin-top: 0.75rem; padding: 0.6rem 0.75rem; border-radius: 6px; font-size: 0.85rem; }
+    .alert.warn { background: rgba(230, 162, 60, 0.15); border: 1px solid var(--warn); color: #f0c78a; }
+    footer { margin-top: 2rem; font-size: 0.8rem; color: var(--muted); }
+    footer a { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <h1>Vertex AI Provisioned Throughput vs PayGo</h1>
+  <p class="sub">固定模型与用量，对比对比窗口内的 PT 固定成本与 Standard PayGo 按量成本。PT 的 $/M 为摊销值，非官方标价。</p>
+
+  <fieldset>
+    <legend>模型</legend>
+    <div class="row">
+      <div>
+        <label for="model">预设</label>
+        <select id="model"></select>
+      </div>
+    </div>
+    <div id="customFields">
+      <div class="row">
+        <div><label>Throughput / GSU (burndown tokens/s)</label><input type="number" id="cThroughput" min="1" step="1" value="2015" /></div>
+        <div><label>Burndown: input token</label><input type="number" id="cRin" min="0" step="0.1" value="1" /></div>
+        <div><label>Burndown: output text token</label><input type="number" id="cRoutText" min="0" step="0.1" value="6" /></div>
+        <div><label>Burndown: output image token</label><input type="number" id="cRoutImg" min="0" step="0.1" value="120" /></div>
+        <div><label>PayGo $/M input</label><input type="number" id="cPayIn" min="0" step="0.01" value="0.5" /></div>
+        <div><label>PayGo $/M output text</label><input type="number" id="cPayOutT" min="0" step="0.01" value="3" /></div>
+        <div><label>PayGo $/M output image</label><input type="number" id="cPayOutI" min="0" step="0.01" value="60" /></div>
+      </div>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>PT 与窗口</legend>
+    <div class="row">
+      <div>
+        <label for="term">合约类型</label>
+        <select id="term"></select>
+      </div>
+      <div>
+        <label for="gsu">GSU 数量</label>
+        <input type="number" id="gsu" min="1" step="1" value="1" />
+      </div>
+      <div>
+        <label for="windowDays">对比窗口（天）</label>
+        <input type="number" id="windowDays" min="1" step="1" value="30" />
+      </div>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>用量（按「每月」口径，再按窗口天数比例缩放）</legend>
+    <div class="usage-mode">
+      <label><input type="radio" name="usageMode" value="perRequest" checked /> 按请求：每月请求数 + 单次平均 token</label>
+      <label><input type="radio" name="usageMode" value="totals" /> 按总量：每月各向 token（百万）</label>
+    </div>
+    <div id="modePerRequest">
+      <div class="row">
+        <div><label>每月请求数</label><input type="number" id="reqPerMonth" min="0" step="1" value="100000" /></div>
+        <div><label>单次平均 input tokens</label><input type="number" id="avgIn" min="0" step="1" value="500" /></div>
+        <div><label>单次平均 output text tokens</label><input type="number" id="avgOutText" min="0" step="1" value="200" /></div>
+        <div><label>单次平均 output image tokens</label><input type="number" id="avgOutImg" min="0" step="1" value="0" /></div>
+      </div>
+    </div>
+    <div id="modeTotals" style="display: none;">
+      <div class="row">
+        <div><label>每月 input（百万 tokens）</label><input type="number" id="totInM" min="0" step="0.001" value="50" /></div>
+        <div><label>每月 output text（百万）</label><input type="number" id="totOutTextM" min="0" step="0.001" value="20" /></div>
+        <div><label>每月 output image（百万）</label><input type="number" id="totOutImgM" min="0" step="0.001" value="0" /></div>
+      </div>
+    </div>
+  </fieldset>
+
+  <button type="button" id="calcBtn">计算</button>
+
+  <div id="results" hidden>
+    <h2>结果</h2>
+    <div class="metric"><span>PT（窗口内固定成本）</span><strong id="outPt">—</strong></div>
+    <div class="metric"><span>PayGo Standard（窗口内按量）</span><strong id="outPaygo">—</strong></div>
+    <div class="metric"><span>差额（PayGo − PT）</span><strong id="outDelta">—</strong></div>
+    <div class="metric"><span>窗口内 input / out text / out image（tokens）</span><span id="outTokens">—</span></div>
+    <h2 style="margin-top: 1rem;">PT 容量（平均 burndown/s）</h2>
+    <div class="metric"><span>所需平均 burndown/s</span><strong id="outNeedBd">—</strong></div>
+    <div class="metric"><span>已购容量（GSU × throughput）</span><strong id="outCapBd">—</strong></div>
+    <div class="metric"><span>平均利用率</span><strong id="outUtil">—</strong></div>
+    <div class="bar-wrap"><div class="bar" id="utilBar" style="width: 0%"></div></div>
+    <div id="utilAlert"></div>
+    <h2 style="margin-top: 1rem;">PT 摊销等效 $/M（按 burndown 比例分摊 PT 成本）</h2>
+    <div class="metric"><span>Input</span><strong id="outEffIn">—</strong></div>
+    <div class="metric"><span>Output text</span><strong id="outEffOutT">—</strong></div>
+    <div class="metric"><span>Output image</span><strong id="outEffOutI">—</strong></div>
+  </div>
+
+  <footer>
+    <p>数据来源：<a href="https://cloud.google.com/vertex-ai/generative-ai/pricing#provisioned-throughput">Vertex AI 定价</a>、
+    <a href="https://docs.cloud.google.com/vertex-ai/generative-ai/docs/provisioned-throughput/supported-models">Supported models / burndown</a>。
+    价格与参数可能变更，以 Google 官方为准。</p>
+    <p>本地运行：<code>npx -y serve .</code>（在计算器目录下）或直接打开本 HTML。</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

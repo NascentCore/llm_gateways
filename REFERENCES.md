@@ -44,3 +44,5 @@
 - 1 年 PT 在满负载下比 PayGo 便宜约 23–24%
 - 1 月 PT 基本无成本优势
 - PT 仅在高利用率下划算；利用率低时有效单价上升
+
+**本地计算器**：[tools/pt-paygo-calculator/README.md](tools/pt-paygo-calculator/README.md)（PT vs PayGo 对比页面）
