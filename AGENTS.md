@@ -22,6 +22,8 @@ This file provides practical guidance for coding agents working in this reposito
   Builds huge prompts and measures Gemini high-thinking latency.
 - `scripts/newapi_batch_accounts/`  
   Batch NewAPI account creation tooling.
+- `docs/newapi-pricing-and-models.md`  
+  NewAPI 模型计费、配额、渠道模型列表/映射与补全倍率说明（中文）。
 - `benchmark/`  
   End-to-end load testing assets and operation docs.
 
