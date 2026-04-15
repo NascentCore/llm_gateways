@@ -197,12 +197,15 @@
 3. 运行无 UI 压测（示例：50 用户、每秒 10 用户启动、持续 300 秒，并输出 CSV 与 HTML）：
 
    ```bash
-   locust -f locustfile.py --headless -u 50 -r 10 -t 300s --csv=report --html=report.html
+   locust -f locustfile.py --headless -u 50 -r 10 -t 300s \
+     --host="$NEWAPI_BASE_URL" \
+     --csv=report --html=report.html
    ```
 
 4. 查看结果：
 
    - 控制台会打印汇总的 RPS、延迟、失败数等。
+   - 终端摘要：`python3 summarize_run.py` 或 `python3 summarize_run.py report_stats.csv --failures`（若存在 `locust_last_token_metrics.json`，会显示 **RPM / TPM**）。
    - 当前目录会生成：
      - `report_stats.csv`：各请求类型的统计（按 `/v1/chat/completions in=… out=…` 分桶，便于对比不同 input/output 下的吞吐）。
      - `report_failures.csv`：失败请求明细（若有）。
